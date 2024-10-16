@@ -1,0 +1,9 @@
+p{    /*all paragraph*/
+    font-family: Roboto, Arial;      /*font stack, if first fails to load, second is loaded*/
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body{
+    margin: 0;
+}
