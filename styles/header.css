@@ -12,6 +12,10 @@
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: rgb(227, 227, 227);
+    z-index: 10;   /*due to position relative of thumbnail timestamp, z index of thumbnail became more than
+                    header and it started showing on top of header, so giving header a higher z-index*/
+    font-family: Roboto, Arial;
+
 
 }
 
@@ -60,14 +64,48 @@
 .search-button{
     height:37px;
     width:60px;
-    display: flex;              /* instead simply padding can also be done*/
-    align-items: center;
-    justify-content: center;
+    /* display: flex;              instead simply padding can also be done */
+    /* align-items: center;
+    justify-content: center; */
+    padding-top: 6px;
     background-color: rgb(249, 245, 245);
     border: 1px solid rgb(202, 190, 190);
     margin-left: -2px;
     margin-right: 10px;
+    position: relative;       /*bcoz (absolute inside relative) makes */
 }
+.search-button,
+.voice-search-button,
+.upload-icon-container,
+.youtube-apps-icon-container,
+.notifications-icon-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-button:hover .tool-title,
+.voice-search-button:hover .tool-title,
+.upload-icon-container:hover .tool-title,
+.youtube-apps-icon-container:hover .tool-title,
+.notifications-icon-container:hover .tool-title{
+    opacity: 1;
+}
+.tool-title{
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding: 8px 8px;
+    bottom: -50px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none; /*do nothing when pointer hovers over place where there is title*/
+    white-space: nowrap;   /*meaning title is shown in same line, not different lines*/
+
+}
+
 .voice-search-button{
     height: 37px;
     width: 37px;
@@ -76,7 +114,6 @@
     background-color: rgb(249, 245, 245);
 }
 .voice-search-icon{
-    margin-top: 3px;
     height: 25px;
 }
 
@@ -94,9 +131,27 @@
 .youtube-apps-icon{
     height: 24px;
 }
+.notifications-icon-container{
+    position: relative;
+}
 .notifications-icon{
     height: 24px;
 }
+.notifications-count{
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: red;
+    color: white;
+    /* height: 20px;
+    width: 20px; */
+    border-radius: 25px;
+    border: 2px solid white;
+    font-family: Roboto, arial;
+    font-size: 9px;
+    padding: 2px 5px;
+}
+
 .current-channel-icon{
     height: 32px;
     border-radius: 16px;

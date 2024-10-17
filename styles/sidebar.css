@@ -4,5 +4,36 @@
     bottom: 0;
     top: 55px;
     background-color:white;
-    width: 68px;
+    width: 69px;
+    padding-top: 10px;
+    /* border: 1px solid black; */
+    z-index: 20;
+    /* border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: rgb(227, 227, 227); */
+}
+.sidebar-link{
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+.sidebar-link:hover{
+    background-color: rgb(237, 237, 237);
+    cursor: pointer;
+    border-radius: 7px;
+    /* margin: 2px 2px; */
+}
+
+.sidebar-link img{
+    height: 25px;
+}
+.sidebar-link div{
+    font-family: arial;
+    font-size: 10px;
+    margin-top: 5px;
+
 }
