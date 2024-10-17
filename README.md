@@ -1,2 +1,2 @@
 # YouTube-UI-Clone
-This repository contains the youtube clone that I made in October 2024.
+This repository contains a youtube clone that I made using HTML and CSS.
