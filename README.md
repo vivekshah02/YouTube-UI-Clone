@@ -1,2 +1,2 @@
 # YouTube-UI-Clone
-This repository contains a youtube clone that I made using HTML and CSS.
+This repository contains a YouTube UI(frontend) clone that I made using HTML and CSS.
