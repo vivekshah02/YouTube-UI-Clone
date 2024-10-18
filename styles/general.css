@@ -1,12 +1,11 @@
 p{    /*all paragraph*/
-    font-family: Roboto, Arial;      /*font stack, if first fails to load, second is loaded*/
     margin-top: 0;
     margin-bottom: 0;
-
 }
 
 
 body{
+    font-family: Roboto, Arial;      /*font stack, if first fails to load, second is loaded*/
     margin: 0;
     padding-top: 80px;
     padding-left: 95px;

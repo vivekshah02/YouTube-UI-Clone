@@ -75,7 +75,6 @@
 }
 
 .video-time{
-    font-family: roboto, arial;
     background-color: black;
     color: white;
     position: absolute;  /*absolute inside relative(thumbnail)*/

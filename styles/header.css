@@ -14,7 +14,6 @@
     border-bottom-color: rgb(227, 227, 227);
     z-index: 10;   /*due to position relative of thumbnail timestamp, z index of thumbnail became more than
                     header and it started showing on top of header, so giving header a higher z-index*/
-    font-family: Roboto, Arial;
 
 
 }
@@ -26,21 +25,41 @@
     align-items: center;    /*vertically*/
 
 }
-.hamburger-menu{
+
+.hamburger-link{
+    height: 40px;
     display: flex;
-    height: 22px;
-    margin-left: 24px;
-    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 22px;
+    padding-right: 20px;
+
 }
+.hamburger-link:hover{
+    padding-left:9px;
+    padding-right: 8px;
+    margin-left: 13px;
+    margin-right: 12px;
+    background-color: rgb(237, 237, 237);
+    cursor: pointer;
+    border-radius: 50%;
+}
+.hamburger-menu{
+    height: 25px;
+}
+
+
+
 .youtube-logo-menu{
     height: 22px;
 }
 
 .middle-section{
     flex: 1;
-    margin-left: 70px;
-    margin-right: 35px;
-    max-width: 500px;
+    margin-left: 50px;
+    margin-right: 0;
+    max-width: 650px;
     display: flex;
     align-items: center;
 }
@@ -50,35 +69,37 @@
     font-size: 16px;
     border: 1px solid rgb(202, 190, 190);
     padding-left: 10px;
-    border-radius: 2px;
+    border-radius: 20px;
     box-shadow: inset 1px 2px 2px rgba(0, 0,0,0.05);
     width: 0;                /*so search bar shrinks*/
 }
 .search-bar::placeholder{
-    font-family: Roboto, Arial;
     font-size: 16px;
 }
 .search-icon{
     height: 25px;
 }
 .search-button{
-    height:37px;
+    height:37.5px;
     width:60px;
     /* display: flex;              instead simply padding can also be done */
     /* align-items: center;
     justify-content: center; */
-    padding-top: 6px;
+    padding-top: 2px;
     background-color: rgb(249, 245, 245);
     border: 1px solid rgb(202, 190, 190);
-    margin-left: -2px;
-    margin-right: 10px;
+    margin-left: -20px;
+    margin-right: 14px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
     position: relative;       /*bcoz (absolute inside relative) makes */
 }
 .search-button,
 .voice-search-button,
 .upload-icon-container,
 .youtube-apps-icon-container,
-.notifications-icon-container{
+.notifications-icon-container,
+.youtube-logo-container{
     position: relative;
     display: flex;
     justify-content: center;
@@ -88,7 +109,8 @@
 .voice-search-button:hover .tool-title,
 .upload-icon-container:hover .tool-title,
 .youtube-apps-icon-container:hover .tool-title,
-.notifications-icon-container:hover .tool-title{
+.notifications-icon-container:hover .tool-title,
+.youtube-logo-container:hover .tool-title{
     opacity: 1;
 }
 .tool-title{
@@ -147,7 +169,6 @@
     width: 20px; */
     border-radius: 25px;
     border: 2px solid white;
-    font-family: Roboto, arial;
     font-size: 9px;
     padding: 2px 5px;
 }
@@ -156,3 +177,4 @@
     height: 32px;
     border-radius: 16px;
 }
+
